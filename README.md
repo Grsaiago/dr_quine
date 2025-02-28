@@ -40,8 +40,8 @@ Displays its own source code when executed.
 Requirements:
 
 1. A main function.
-1. Two different comments (one inside main, one outside).
-1. An additional function called from main.
+1. A function declared outside main and called in main.
+1. Two different comments: One in main and another one outside main.
 
 ### Grace
 
@@ -51,7 +51,7 @@ Writes its own source code to a file named Grace_kid.c.
 Requirements:
 
 1. No main function.
-1. Includes one comment.
+1. One comment.
 1. At most three macros
 1. Program execution is triggered by a macro.
 
