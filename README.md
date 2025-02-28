@@ -80,6 +80,12 @@ test0x:      Runs tests for the x exercise (e.g: test00, test01).
 test:        Runs all tests
 ```
 
+## Requirements
+
+1. [nasm](https://www.nasm.us/)
+1. [clang](https://clang.llvm.org/)
+1. [make](https://www.gnu.org/software/make/manual/make.html)
+
 ## Testing
 
 Just go into the asm or the c directories and run
