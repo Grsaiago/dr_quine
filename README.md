@@ -77,6 +77,7 @@ clean:       Deletes transitive dependencies (object files).
 fclean:      Deletes object files and executables.
 re:          Runs fclean followed by build.
 test0x:      Runs tests for the x exercise (e.g: test00, test01).
+test:        Runs all tests
 ```
 
 ## Testing
@@ -85,4 +86,10 @@ Just go into the asm or the c directories and run
 
 ```sh
 make test0X # where X is the exercise number
+```
+
+or, to run all tests:
+
+```sh
+make test
 ```
