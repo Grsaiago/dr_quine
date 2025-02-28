@@ -70,7 +70,7 @@ Requirements:
 
 Each language directory (asm and c) contains a Makefile with the following rules:
 
-```sh
+```text
 all/help:    Displays available Makefile rules.
 build:       Compiles the executables for all programs.
 clean:       Deletes transitive dependencies (object files).
