@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# binaries
+asm/ex00/Colleen
+
+c/ex00/Colleen
+c/ex01/Grace
+c/ex02/Sully
