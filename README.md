@@ -70,11 +70,11 @@ Requirements:
 
 Each language directory (asm and c) contains a Makefile with the following rules:
 
-```sh
+``
 all/help: Displays available Makefile rules.
 build: Compiles the executables for all programs.
 clean: Deletes transitive dependencies (object files).
 fclean: Deletes object files and executables.
 re: Runs fclean followed by build.
 test0X: Runs tests for the x exercise (e.g: test00, test01).
-```
+``
