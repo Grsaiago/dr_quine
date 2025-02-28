@@ -65,6 +65,9 @@ test01: $(EX01_BIN) ## Build and Test the exercise 01
 test02: $(EX02_BIN) ## Build and Test the exercise 02
 	cd $(EX02_DIR) && ./$(EX02_NAME) && ls -al | grep $(EX02_NAME) | wc -l && echo "Se o output foi 13, tá igual o do pdf <3"
 
+.PHONY: test
+tests:  test00 test01 test02 ## Runs all tests
+
 $(EX00_OBJ_DIR)/%.o: $(EX00_DIR)/%.c
 	@$(CC) -c $(CFLAGS) $< -o $@
 

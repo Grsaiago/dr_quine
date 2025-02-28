@@ -39,6 +39,8 @@ test00: $(EX00_BIN) ## Build and Test the exercise 00
 	cd $(EX00_DIR) && diff cat_output bin_output && echo "Não tem diferença entre eles yipiiiiiii"
 	@cd $(EX00_DIR) && rm -f bin_output cat_output
 
+.PHONY: test
+tests:  test00 ## Runs all tests
 
 $(EX00_OBJ_DIR)/%.o: $(EX00_DIR)/%.s
 	@$(NASM) $(NFLAGS) $< -o $@
