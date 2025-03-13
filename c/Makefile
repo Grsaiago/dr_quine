@@ -68,13 +68,22 @@ test02: $(EX02_BIN) ## Build and Test the exercise 02
 .PHONY: test
 tests:  test00 test01 test02 ## Runs all tests
 
-$(EX00_OBJ_DIR)/%.o: $(EX00_DIR)/%.c
+$(EX00_OBJ_DIR):
+	mkdir -p $(EX00_OBJ_DIR)
+                
+$(EX01_OBJ_DIR):
+	mkdir -p $(EX01_OBJ_DIR)
+                
+$(EX02_OBJ_DIR):
+	mkdir -p $(EX02_OBJ_DIR)
+
+$(EX00_OBJ_DIR)/%.o: $(EX00_DIR)/%.c | $(EX00_OBJ_DIR)
 	@$(CC) -c $(CFLAGS) $< -o $@
 
-$(EX01_OBJ_DIR)/%.o: $(EX01_DIR)/%.c
+$(EX01_OBJ_DIR)/%.o: $(EX01_DIR)/%.c | $(EX01_OBJ_DIR)
 	@$(CC) -c $(CFLAGS) $< -o $@
 
-$(EX02_OBJ_DIR)/%.o: $(EX02_DIR)/%.c
+$(EX02_OBJ_DIR)/%.o: $(EX02_DIR)/%.c | $(EX02_OBJ_DIR)
 	@$(CC) -c $(CFLAGS) $< -o $@
 
 $(EX00_BIN): $(EX00_OBJS)
